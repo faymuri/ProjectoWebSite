@@ -1,11 +1,11 @@
 {
-    "title": "Simple Sidebar",
-    "name": "startbootstrap-simple-sidebar",
-    "version": "5.1.1",
+    "title": "Blog Post",
+    "name": "startbootstrap-blog-post",
+    "version": "4.2.1",
     "scripts": {
         "start": "node_modules/.bin/gulp watch"
     },
-    "description": "A simple sidbar navigation HTMl template built with Bootstrap",
+    "description": "A basic blog post HTML template built with Bootstrap",
     "keywords": [
         "css",
         "sass",
@@ -14,9 +14,9 @@
         "theme",
         "template"
     ],
-    "homepage": "https://startbootstrap.com/template-overviews/simple-sidebar",
+    "homepage": "https://startbootstrap.com/template-overviews/blog-post",
     "bugs": {
-        "url": "https://github.com/BlackrockDigital/startbootstrap-simple-sidebar/issues",
+        "url": "https://github.com/BlackrockDigital/startbootstrap-blog-post/issues",
         "email": "feedback@startbootstrap.com"
     },
     "license": "MIT",
@@ -26,7 +26,7 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/BlackrockDigital/startbootstrap-simple-sidebar.git"
+        "url": "https://github.com/BlackrockDigital/startbootstrap-blog-post.git"
     },
     "dependencies": {
         "bootstrap": "4.3.1",
