@@ -15,19 +15,23 @@
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
     <!--linkcss-->
-    <link rel="stylesheet" href="/CSS/formularios.css">
-    <!--iconos de login-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
-    <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <link rel="stylesheet" href="/CSS/grid.css">
+    <!--Fuente-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#"></a>
+            <a class="navbar-brand" href="index.html">Computer Store</a>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Computer Store</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -35,64 +39,21 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home
-                            <span class="sr-only"></span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/HTML/nuestros productos.html">Nuestros productos</a>
+                        <a class="nav-link" href="/HTML/index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="nuestra empresa.html">Nuestra Empresa</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/HTML/login.html">Login</a>
+                        <a class="nav-link" href="/HTML/nuestros productos.html">Nuestros productos</a>
                     </li>
-                </ul>   
+                    <li class="nav-item">
+                        <a class="nav-link" href="/HTML/login.html">login</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
-    <div>
-        <nav>
-            
-        </nav>
-    </div>
-
-    <!-- Page Content -->
-    <div class="container">
-
-        <div class="row">
-
-            <div class="col-lg-3">
-                <!--menu bar lado izquierdo-->
-                <h1 class="my-4">Computer Store</h1>
-                <div class="pos-f-t">
-                    <div class="collapse" id="navbarToggleExternalContent">
-                        <div class="">
-                            <div class="list-group">
-                                <a href="/HTML/nuestros productos.html" class="list-group-item">Nuestros productos</a>
-                                <a href="/HTML/nuestra empresa.html" class="list-group-item">Nuestra Empresa</a>
-                                <a href="/HTML/contacto.html" class="list-group-item">Contactanos</a>
-                            </div>
-                        </div>
-                    </div>
-                    <nav class="navbar navbar-dark bg-dark">
-                        <button class="navbar-toggler" type="button" data-toggle="collapse"
-                            data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                    </nav>
-                </div>
-
-            </div>
-            <!-- /.col-lg-3 -->
-
-        </div>
-        <!-- /.row -->
-
-    </div>
-    <!-- /.col-lg-9 -->
     <div>
         <div>
             <nav>
@@ -100,23 +61,26 @@
                     <div class="col-sm-8 main-section">
                         <div class="modal-content">
                             <div class="col-12 user-img">
-                                <img src="/Images/sctore.png" th:src="@{/img/user.png}"/>
+                                <img src="/Images/compusotre.jpg" th:src="@{/img/user.png}" />
                             </div>
                             <form class="col-12" th:action="@{/login}" method="get">
                                 <div class="form-group" id="user-group">
-                                    <input type="text" class="form-control" placeholder="Nombre de usuario" name="username"/>
+                                    <input type="text" class="form-control" placeholder="Nombre de usuario"
+                                        name="username" />
                                 </div>
                                 <div class="form-group" id="contrasena-group">
-                                    <input type="password" class="form-control" placeholder="Contrasena" name="password"/>
+                                    <input type="password" class="form-control" placeholder="Contrasena"
+                                        name="password" />
                                 </div>
-                                <button type="submit" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i>  Ingresar </button>
+                                <button type="submit" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i>
+                                    Ingresar </button>
                             </form>
                             <div class="col-12 forgot">
                                 <a href="#">Recordar contrasena?</a>
                             </div>
                             <div th:if="${param.error}" class="alert alert-danger" role="alert">
                                 Invalid username and password.
-                            </div>  
+                            </div>
                             <div th:if="${param.logout}" class="alert alert-success" role="alert">
                                 You have been logged out.
                             </div>
@@ -125,31 +89,97 @@
                 </div>
             </nav>
         </div>
-    </div>
+        </>
 
-    
-    <!-- /.row -->
 
-    <!-- /.container -->
 
-    <!-- Footer -->
-    <footer class="py-5 bg-dark">
-        <div class="container">
-            <p class="m-0 text-center text-white">Copyright &copy;Fay y Camilo</p>
-        </div>
         <!-- /.container -->
-    </footer>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-        crossorigin="anonymous"></script>
+        <!-- Footer -->
+        <footer class="py-5 footer">
+            <div class="wrapper">
+
+                <section class="columns">
+
+                    <div class="column">
+                        <img src="/Images/imgs/camion.png" alt="">
+                        <a>ENVÍO RÁPIDO Y GRATUITO</a>
+                        <p>Todos los productos de la tienda en línea tienen envío gratuito a toda Colombia.</p>
+                    </div>
+
+                    <div class="column">
+                        <img src="/Images/imgs/mercadopago-blanco-40.png" alt="">
+                        <a>CON MERCADOPAGO ES MÁS FÁCIL</a>
+                        <p>En nuestra tienda podrás usar tu método de pago favorito.</p>
+                    </div>
+
+                    <div class="column">
+                        <img src="/Images/imgs/seguridad (1).png" alt="">
+                        <a>COMPRA FÁCIL Y 100% SEGURA</a>
+                        <p>Todos tus datos están protegidos con nuestro certificado de seguridad.</p>
+                    </div>
+
+                </section>
+
+
+
+            </div>
+
+
+
+        </footer>
+
+
+
+        <div class="article">
+            <article class="columns">
+
+                <div class="column">
+                    <h2>COMUNÍCATE CON NOSOTROS</h2>
+                    <p> +57 (1) 333 333 </br>
+                        +57 (320) 590 3860</br>
+                        +57 (301) 257 2493</br>
+                        contacto@computerstore.com </br>
+                        Si tienes alguna queja, reclamo contactar al número de telefono
+                    </p>
+
+                </div>
+
+                <div class="column">
+                    <h2>¡VISÍTANOS!</h2>
+                    <p>Carrera 68 #104, Complejo Norte, Medellín, Antioquia</p>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.7163230763854!2d-75.57092368590659!3d6.300956127460148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e442f25d6670d4d%3A0x8043999e5e767b96!2sSENA%20-%20Centro%20de%20Tecnolog%C3%ADa%20de%20la%20Manufactura%20Avanzada!5e0!3m2!1ses-419!2sco!4v1592176140054!5m2!1ses-419!2sco"
+                        width="300" height="100" frameborder="0" style="border:0;" allowfullscreen=""
+                        aria-hidden="false" tabindex="0"></iframe>
+
+
+                </div>
+
+                <div class="column">
+                    <h2>MÉTODOS DE PAGO</h2>
+                    <img src="/Images/mtodos-de-pago-en-la-tienda.png" width="300px" height="100px" alt="">
+                </div>
+
+            </article>
+        </div>
+        <div class="formulate">
+            <p class="m-0 text-center ">Copyright &copy; Fay y Camilo</p>
+        </div>
+
+
+
+
+        <!-- Bootstrap core JavaScript -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"></script>
 
 </body>
 

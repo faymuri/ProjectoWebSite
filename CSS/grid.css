@@ -2,7 +2,7 @@ body {
     padding-top: 56px;
     background-color: white;
     font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
+    font-size: 10px;
 }
 
 
@@ -26,15 +26,23 @@ color: black;
 .footer{
   background: grey;
   color: #E6E6E6;
-}
-.formulate{
-  background-color:black;
-  color: white;
+  
 }
 .columns{
-  display: inline-flex;
-  height: 60px;
+  text-align: center;
+  column-rule: black solid 2px;
+  columns: 3;
   text-align: center;
   
   
 }
+article{
+  background-color: black;
+  color: white;
+}
+.formulate{
+  background-color: black;
+  color: white;
+  padding: 5px;
+}
+
