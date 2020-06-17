@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="/socia-bar/font.css">
     <!--iconomenu-->
     <link rel="stylesheet" href="/socia-bar/icon-menu.css">
-
+    <script src="../JavaScript/Main.js"></script>
 
 </head>
 
@@ -118,7 +118,7 @@
                         <form id="contactForm" name="sentMessage" novalidate="novalidate">
                             <div class="control-group">
                                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                                    <input class="form-control" id="name" type="text" placeholder="Nombre completo" required="required" data-validation-required-message="Por favor ingrese su nombre." />
+                                    <input class="form-control" name="name" id="name" type="text" placeholder="Nombre completo" required="required" data-validation-required-message="Por favor ingrese su nombre." />
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
@@ -142,7 +142,7 @@
                             </div>
                             <br />
                             <div id="success"></div>
-                            <div class="form-group"><input type="submit" value="Enviar mensaje" class="button"></div>
+                            <div class="form-group"><input type="submit" onclick="getDataContacto()" value="Enviar mensaje" class="button"></div>
                         </form>
                     </div>
                 </div>

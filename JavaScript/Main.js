@@ -36,3 +36,22 @@ $(document).ready(function(){
 	});
 
 });
+
+// alerta de que datos se guardaron exitosamente
+
+function getDataContacto(){
+    let nombre = document.getElementById("name").value;
+
+    
+    console.log("Hola " + nombre + " Gracias por contactarnos en breve te estaremos contestando la solicitud!")
+    
+    alert("Hola "+nombre+ " Gracias por contactarnos en breve te estaremos contestando la solicitud!")
+}
+function getDataRegistro(){
+    let nombre = document.getElementById("name").value;
+
+    
+    console.log("Hola " + nombre + " Gracias por registrarse en nuestra pagina! BIENVENIDO")
+    
+    alert("Hola "+nombre+ " Gracias por registrarse en nuestra pagina! BIENVENIDO")
+}
