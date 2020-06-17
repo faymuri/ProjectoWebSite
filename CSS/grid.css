@@ -5,6 +5,8 @@ body {
   font-size: 15px;
   background-image: url(../Images/fondo.jpg);
   background-size: cover;
+  position: relative;
+
 }
 
 a {
@@ -13,11 +15,13 @@ a {
   text-decoration: none;
   margin: 5px;
   padding: 5px;
+  position: relative;
 }
 
 a:hover {
   color: #e6e6e6;
   font-size: 20px;
+  position: relative;
 }
 
 .navbar {
@@ -25,8 +29,14 @@ a:hover {
   color: black;
   height: 70px;
   background-image: url(../Images/fondo3.jpg);
-  background-size: cover;
+  background-size: unset;
+  background-position: bottom;
+
   
+}
+
+section{
+  position: relative;
 }
 .footer {
   background: grey;
