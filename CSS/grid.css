@@ -3,6 +3,8 @@ body {
   background-color: white;
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
+  background-image: url(../Images/fondo.jpg);
+  background-size: cover;
 }
 
 a {
@@ -21,7 +23,10 @@ a:hover {
 .navbar {
   background: #610b4b;
   color: black;
-  height: 50px;
+  height: 70px;
+  background-image: url(../Images/fondo3.jpg);
+  background-size: cover;
+  
 }
 .footer {
   background: grey;

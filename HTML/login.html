@@ -47,9 +47,6 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="/HTML/index.html">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="nuestra empresa.html">Nuestra Empresa</a>
-                    </li>
                     <div class="dropdown">
                         <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
@@ -63,6 +60,17 @@
                             <a class="dropdown-item" href="/HTML/almacenamiento.html">Ver todo</a>
                         </div>
                     </div>
+                    <div class="dropdown">
+                        <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Nuestra Empresa</a>
+                       <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="/HTML/monitores.html">¿Quienes somos?</a>
+                        <a class="dropdown-item" href="/HTML/accesorios.html">Mision</a>
+                        <a class="dropdown-item" href="/HTML/piezas.html">Vision</a>
+                        <a class="dropdown-item" href="/HTML/almacenamiento.html">Valores</a>
+                        <a class="dropdown-item" href="/HTML/almacenamiento.html">Trabaje con nosotros</a>
+                        </div>
+                      </div>
                     <li class="nav-item">
                         <a class="nav-link" href="/HTML/login.html">Mi Cuenta</a>
                     </li>
@@ -73,22 +81,22 @@
     <form class="formulario">
         <div class="col-12 user-img">
             <img src="/Images/newlogo.png" th:src="@{/img/user.png}" />
-            <h2>Login</h2>
+            <h1>Login</h1>
         </div>
         <div class="contenedor">
             <div class="input-contenedor">
                 <i class="fas fa-envelope icon"></i>
-                <input type="email" placeholder="Correo Electronico">
+                <input type="email" placeholder="Correo Electronico" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Ingrese un correo electronico valido" required>
 
             </div>
 
             <div class="input-contenedor">
                 <i class="fas fa-key icon"></i>
-                <input type="password" placeholder="Contraseña">
+                <input type="password" placeholder="Contraseña" required title="ingrese una contraseña">
 
             </div>
             <input type="submit" value="Login" class="button">
-            <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
+            <p>Al iniciar sesion, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
             <p>¿No tienes una cuenta? <a class="link" href="/HTML/registro.html">Registrate </a></p>
         </div>
     </form>
