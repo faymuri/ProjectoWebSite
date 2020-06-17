@@ -2,7 +2,7 @@ body {
     padding-top: 56px;
     background-color: white;
     font-family: 'Montserrat', sans-serif;
-    font-size: 10px;
+    font-size: 15px;
 }
 
 
@@ -16,6 +16,7 @@ a{
 a:hover{
   color: #E6E6E6;
   font-size: 20px;
+  
 }
 
 .navbar{
@@ -23,7 +24,6 @@ background:#610B4B;
 color: black;
 height: 50px;
 }
-
 .footer{
   background: grey;
   color: #E6E6E6;
@@ -83,3 +83,4 @@ article{
   padding: 10px 30px;
   background: #000;
 }
+icon:
