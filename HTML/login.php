@@ -1,3 +1,51 @@
+<?php
+
+//se inclue el archivo conexion.php que es en donde se encuentra 
+//las instrucciones para establecer la conexion entre php y la base de datos
+include('conexion.php');
+
+//Evita el error de las variables vacias
+error_reporting(E_ERROR | E_WARNING | E_PARSE);
+
+session_start();
+
+//Si se ha enviado el formulario
+// se inicializan variables con los parametros de la tabla usuarios
+$correo_electronico = $_REQUEST['correo_electronico'];
+$clave = $_REQUEST['clave'];
+$nombre_completo = $_REQUEST['nombre_completo'];
+
+if (isset($user) && isset($clave))
+
+     {
+        // extrae  las  3 primeras letras de la informacion ingresada en el campo usuario      
+         $salt = substr ($correo_electronico, 0, 3);
+         // se crea la encriptacion de la clave ingresada para hacer una contraseña segura
+         $clave_crypt = crypt ($clave, $salt);
+         $instruccion = "SELECT correo_electronico, clave FROM registro WHERE correo_electronico = '$correo_electronico'" .
+            " and clave = '$clave_crypt'";
+         $consulta = mysqli_query ($conexion, $instruccion)
+            or die ("Fallo en la consulta");
+         $nfilas = mysqli_num_rows ($consulta);
+         mysqli_close ($conexion);
+
+
+      // Los datos introducidos son correctos
+         if ($nfilas > 0)
+         {
+            $correo_electronico_valido = $correo_electronico ;
+            $_SESSION["correo_electronico_valido"] = $correo_electronico_valido;
+           // print ("<P>Valor de la variable de sesión: $usuario_valido</P>\n");
+            echo" <script>
+                    window.alert('Bienvenido $nombre_completo');
+                  </script>";
+         }
+      }
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,6 +77,7 @@
 </head>
 
 <body>
+
   <div class="social">
     <ul>
       <li><a href="https://www.facebook.com/" target="none" class="icon-facebook2"></a></li>
@@ -85,9 +134,26 @@
         </div>
       </div>
     </nav>
+    <?php
+    if (isset($_SESSION["correo_electronico_valido"])){
+      }
+    ?>
+
+<?PHP
+     
+       // Intento de entrada fallido
+   else  (isset ($correo_electronico))
+   {
+      print ("<BR><BR>\n");
+      print ("<P ALIGN='CENTER'>Acceso no autorizado</P>\n");
+      
+      print ("<P ALIGN='CENTER'><a class='btn btn-primary' href='login.php' role='button'>Conectar</a></P>\n");
+
+   }
+   ?>
   
       <!--seccion del formulario-->
-    <form class="formulario">
+    <form class="formulario" action="login.php" method="POST">
         <div class="col-12 user-img">
             <img src="/Images/newlogo.png" th:src="@{/img/user.png}" />
             <h1>Login</h1>
@@ -95,13 +161,13 @@
         <div class="contenedor">
             <div class="input-contenedor">
                 <i class="fas fa-envelope icon"></i>
-                <input type="email" placeholder="Correo Electronico" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Ingrese un correo electronico valido" required>
+                <input type="email" placeholder="Correo Electronico" name="correo_electronico" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Ingrese un correo electronico valido" required>
 
             </div>
 
             <div class="input-contenedor">
                 <i class="fas fa-key icon"></i>
-                <input type="password" placeholder="Contraseña" required title="ingrese una contraseña">
+                <input type="password" placeholder="Contraseña" name="clave" required title="ingrese una contraseña">
 
             </div>
             <input type="submit" value="Login" class="button">
