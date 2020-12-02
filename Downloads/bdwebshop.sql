@@ -42,7 +42,7 @@ CREATE TABLE `contacto` (
 --
 
 CREATE TABLE `registro` (
-  `idregistro` smallint(5) NOT NULL AUTO_INCREMENT,
+  `idregistro` smallint(5) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `nombre_completo` varchar(35) NOT NULL,
   `correo_electronico` varchar(35) NOT NULL,
   `clave` varchar(20) NOT NULL
@@ -61,9 +61,7 @@ ALTER TABLE `contacto`
 --
 -- Indices de la tabla `registro`
 --
-ALTER TABLE `registro`
-  ADD PRIMARY KEY (`idregistro`);
-COMMIT;
+
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
