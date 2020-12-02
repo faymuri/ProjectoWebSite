@@ -42,10 +42,10 @@ CREATE TABLE `contacto` (
 --
 
 CREATE TABLE `registro` (
-  `idregistro` varchar(15) NOT NULL,
+  `idregistro` smallint(5) NOT NULL AUTO_INCREMENT,
   `nombre_completo` varchar(35) NOT NULL,
-  `correo_electronico` varchar(25) NOT NULL,
-  `contraseña` varchar(15) NOT NULL
+  `correo_electronico` varchar(35) NOT NULL,
+  `clave` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
